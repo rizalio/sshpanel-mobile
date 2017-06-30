@@ -1,0 +1,43 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<ion-list inset>
+  <form (ngSubmit)="login()">
+
+    <ion-item style="margin-bottom: 10px;">
+      <ion-label>Endpoint</ion-label>
+      <ion-input [(ngModel)]="creds.endpoint" name="endpoint" type="text"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input [(ngModel)]="creds.email" name="email" type="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Password</ion-label>
+      <ion-input [(ngModel)]="creds.password" name="password" type="password"></ion-input>
+    </ion-item>
+
+
+    <button *ngIf="loading" ion-button style="width: 100%; text-align:center;  margin-top: 50px;" disabled><ion-spinner color="light"></ion-spinner></button>
+    <button *ngIf="!loading" ion-button style="width: 100%; text-align:center;  margin-top: 50px;">Login</button>
+
+  </form>
+
+
+</ion-list>
+
+<hr>
+<p style="text-align: center;color: #808080;">Copyright &copy; 2017 SSHPANEL</p>
+
+</ion-content>
