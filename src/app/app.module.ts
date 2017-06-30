@@ -14,7 +14,8 @@ import { IonicStorageModule } from '@ionic/storage';
 import {DefaultPage} from "../pages/default/default";
 import { AuthProvider } from '../providers/auth/auth';
 
-import { HttpModule } from '@angular/http'; 
+import { HttpModule } from '@angular/http';
+import {logoutGlobal} from "./logout.global";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpModule } from '@angular/http';
     HomePage,
     ListPage,
     LoginPage,
-    DefaultPage
+    DefaultPage,
+    logoutGlobal
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,7 @@ import { HttpModule } from '@angular/http';
     HomePage,
     ListPage,
     LoginPage,
-    DefaultPage
+    DefaultPage,
   ],
   providers: [
     StatusBar,
