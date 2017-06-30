@@ -28,7 +28,7 @@ export class DefaultPage {
            navCtrl.setRoot(HomePage);
         }
       });
-      
+
   }
 
   ionViewDidLoad() {
