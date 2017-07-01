@@ -10,6 +10,16 @@
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
       </button>
+
+      <button ion-item>
+        <ion-icon name="star" item-start></ion-icon>
+        Button Item
+      </button>
+
+      <ion-item-divider>
+        Item Divider
+        <button ion-button item-end>Button</button>
+      </ion-item-divider>
     </ion-list>
   </ion-content>
 
