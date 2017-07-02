@@ -42,10 +42,10 @@ export class LoginPage {
     loader.present().then(() => {
       http.post('https://' + this.creds['endpoint'] + '/api/v1/private/login', param).map(res => res.json()).subscribe(
         data => {
-          console.log(data);
+          console.log(data.details.details);
           // insert data into storage
 
-          this.storage.set('user', data);
+          this.storage.set('user', data.details.details);
 
           this.navCtrl.setRoot(HomePage);
           loader.dismiss();
