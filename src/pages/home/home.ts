@@ -8,12 +8,11 @@ import { Storage } from '@ionic/storage';
 })
 export class HomePage {
 
-  user = null;
+  user: any;
 
   constructor(public navCtrl: NavController, public storage: Storage) {
     storage.get('user').then(user => {
       this.user = user;
-      console.log(user);
     });
   }
 
