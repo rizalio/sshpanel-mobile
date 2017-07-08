@@ -16,6 +16,7 @@ import { AuthProvider } from '../providers/auth/auth';
 
 import { HttpModule } from '@angular/http';
 import {logoutGlobal} from "./logout.global";
+import { SshPage } from '../pages/home/ssh/ssh';
 
 @NgModule({
   declarations: [
@@ -24,11 +25,14 @@ import {logoutGlobal} from "./logout.global";
     ListPage,
     LoginPage,
     DefaultPage,
-    logoutGlobal
+    logoutGlobal,
+    SshPage,
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, {
+      tabsPlacement: 'top',
+    }),
     IonicStorageModule.forRoot(),
     HttpModule
   ],
@@ -39,6 +43,7 @@ import {logoutGlobal} from "./logout.global";
     ListPage,
     LoginPage,
     DefaultPage,
+    SshPage,
   ],
   providers: [
     StatusBar,

@@ -36,7 +36,7 @@ export class LoginPage {
     };
 
     let loader = this.loading.create({
-      content: "Sedang Login"
+      content: "Sedang login..."
     });
 
     loader.present().then(() => {
@@ -46,6 +46,7 @@ export class LoginPage {
           // insert data into storage
 
           this.storage.set('user', data.details.details);
+          this.storage.set('endpoint', 'https://' + this.creds['endpoint'] + '/api/v1/');
 
           this.navCtrl.setRoot(HomePage);
           loader.dismiss();
